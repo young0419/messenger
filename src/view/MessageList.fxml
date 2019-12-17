@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MessageListController">
+   <children>
+      <TableView fx:id="messageList" focusTraversable="false" layoutX="5.0" layoutY="5.0" prefHeight="360.0" prefWidth="490.0">
+        <placeholder>
+        	<Label text="쪽지가 없습니다." />
+    	</placeholder>
+        <columns>
+          <TableColumn fx:id="sendId" editable="false" prefWidth="75.0" text="보낸 이" />
+            <TableColumn fx:id="receiveId" editable="false" prefWidth="82.0" text="받는 이" />
+          <TableColumn fx:id="sendDate" editable="false" prefWidth="93.0" text="DATE" />
+            <TableColumn fx:id="content" editable="false" prefWidth="239.0" text="쪽지 내용" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnreplyMessage" layoutX="435.0" layoutY="371.0" mnemonicParsing="false" onAction="#replyMessage" prefHeight="23.0" prefWidth="60.0" text="답장" />
+   </children>
+</AnchorPane>

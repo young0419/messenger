@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="100.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PreferencesController">
+   <children>
+      <Label layoutX="11.0" layoutY="8.0" text="검색 허용 설정" />
+      <Separator layoutX="8.0" layoutY="27.0" prefHeight="4.0" prefWidth="185.0" />
+      <RadioButton fx:id="btnYes" layoutX="14.0" layoutY="37.0" mnemonicParsing="false" onAction="#setSearchPermit" selected="true" text="Yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="searchOk" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="btnNo" layoutX="14.0" layoutY="64.0" mnemonicParsing="false" onAction="#setSearchPermit" text="No" toggleGroup="$searchOk" />
+      <Separator layoutX="8.0" layoutY="87.0" prefHeight="4.0" prefWidth="185.0" />
+   </children>
+</AnchorPane>
